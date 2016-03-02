@@ -17,11 +17,17 @@ class ViewController: UIViewController {
 
 	@IBOutlet weak var webView: UIWebView!
 
-
-
+	var url = "http://apple.com"
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		
+	url = "https://apple.com"
+	
+	let requestURL = NSURL(string:url)
+    let request = NSURLRequest(URL: requestURL!)
+    webView.loadRequest(request)
+		
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -49,6 +55,7 @@ class ViewController: UIViewController {
 		textField.resignFirstResponder()
 		
 		updateLabel()
+		updateWebView()
 		
 		return true
 	}
@@ -63,6 +70,13 @@ class ViewController: UIViewController {
 		welcomeLabel.text = "\(urlTextField.text!) \("welcomes") \(nameTextField.text!)"
 	
 	}
-
+	
+	func updateWebView(){
+	
+		let url = urlTextField.text
+		let requestURL = NSURL(string:url!)
+    	let request = NSURLRequest(URL: requestURL!)
+    	webView.loadRequest(request)
+	}
 }
 
