@@ -1,25 +1,94 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebView_TextFieleds" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="46I-eI-8Nf">
+                                <rect key="frame" x="164" y="28" width="136" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbJ-f2-Aec">
+                                <rect key="frame" x="12" y="28" width="135" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="BrW-tL-06A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter URL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDT-Ub-8Pk">
+                                <rect key="frame" x="12" y="66" width="135" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N60-5p-rBm">
+                                <rect key="frame" x="164" y="66" width="136" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="url + name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzQ-yV-qu0">
+                                <rect key="frame" x="12" y="450" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dp8-sT-X6p">
+                                <rect key="frame" x="12" y="121" width="288" height="279"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dp8-sT-X6p" firstAttribute="trailing" secondItem="QzQ-yV-qu0" secondAttribute="trailing" id="0Y8-u7-zC3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QzQ-yV-qu0" secondAttribute="bottom" constant="97" id="4vi-cW-xnS"/>
+                            <constraint firstItem="dp8-sT-X6p" firstAttribute="top" secondItem="YDT-Ub-8Pk" secondAttribute="bottom" constant="25" id="94f-Pz-51a"/>
+                            <constraint firstItem="dp8-sT-X6p" firstAttribute="leading" secondItem="QzQ-yV-qu0" secondAttribute="leading" id="B9A-VQ-iC3"/>
+                            <constraint firstItem="46I-eI-8Nf" firstAttribute="top" secondItem="jbJ-f2-Aec" secondAttribute="top" id="HuS-f4-wiN"/>
+                            <constraint firstItem="QzQ-yV-qu0" firstAttribute="top" secondItem="dp8-sT-X6p" secondAttribute="bottom" constant="50" id="Nrf-wU-Hh4"/>
+                            <constraint firstItem="N60-5p-rBm" firstAttribute="bottom" secondItem="YDT-Ub-8Pk" secondAttribute="bottom" id="Pas-VA-a9W"/>
+                            <constraint firstItem="46I-eI-8Nf" firstAttribute="leading" secondItem="jbJ-f2-Aec" secondAttribute="trailing" constant="17" id="Pdq-Xk-yIS"/>
+                            <constraint firstItem="N60-5p-rBm" firstAttribute="top" secondItem="46I-eI-8Nf" secondAttribute="bottom" constant="8" symbolic="YES" id="UZ6-kk-VWA"/>
+                            <constraint firstItem="YDT-Ub-8Pk" firstAttribute="top" secondItem="N60-5p-rBm" secondAttribute="top" id="VWu-f4-E8N"/>
+                            <constraint firstItem="jbJ-f2-Aec" firstAttribute="trailing" secondItem="YDT-Ub-8Pk" secondAttribute="trailing" id="cVN-U7-eZ4"/>
+                            <constraint firstItem="YDT-Ub-8Pk" firstAttribute="top" secondItem="jbJ-f2-Aec" secondAttribute="bottom" constant="8" symbolic="YES" id="cbK-9g-QFt"/>
+                            <constraint firstItem="N60-5p-rBm" firstAttribute="leading" secondItem="46I-eI-8Nf" secondAttribute="leading" id="dBa-mM-Aem"/>
+                            <constraint firstItem="YDT-Ub-8Pk" firstAttribute="leading" secondItem="jbJ-f2-Aec" secondAttribute="leading" id="f8W-fG-yam"/>
+                            <constraint firstItem="N60-5p-rBm" firstAttribute="trailing" secondItem="46I-eI-8Nf" secondAttribute="trailing" id="gNZ-LB-6aF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="46I-eI-8Nf" secondAttribute="trailing" constant="4" id="htO-2h-Jal"/>
+                            <constraint firstItem="N60-5p-rBm" firstAttribute="trailing" secondItem="dp8-sT-X6p" secondAttribute="trailing" id="kPp-ga-AeV"/>
+                            <constraint firstItem="jbJ-f2-Aec" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="mft-HH-cT7"/>
+                            <constraint firstItem="YDT-Ub-8Pk" firstAttribute="leading" secondItem="dp8-sT-X6p" secondAttribute="leading" id="odI-ss-nSe"/>
+                            <constraint firstItem="jbJ-f2-Aec" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="sP9-ZK-jSI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="46I-eI-8Nf" id="vyv-V9-NG5"/>
+                        <outlet property="urlTextField" destination="N60-5p-rBm" id="hvk-xh-Rcy"/>
+                        <outlet property="webView" destination="dp8-sT-X6p" id="PRX-br-zpd"/>
+                        <outlet property="welcomLabel" destination="QzQ-yV-qu0" id="KA3-Og-CAc"/>
+                        <outlet property="welcomeLabel" destination="QzQ-yV-qu0" id="dQW-VS-V4t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="206" y="302"/>
         </scene>
     </scenes>
 </document>
